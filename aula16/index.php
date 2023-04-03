@@ -1,3 +1,8 @@
+<?php
+include_once"dados.php";
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -31,35 +36,33 @@
 </div>
 <!-- Final do Carousel -->
 
-<!-- Inicio do menu --> 
+<!-- Inicio do Menu --> 
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Navbar</a>
+    <a class="navbar-brand" href="#">Menu</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <?php 
+        $categorias = [];
+        foreach($produtos as $key => $value): 
+          if (! in_array ($value["categoria"], $categorias)):
+            $categorias [] = $value ["categoria"];
+          ?>
+
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link" href="#">
+          <?php echo $value ["categoria"]; ?>
+        </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><hr class="dropdown-divider"></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
-        </li>
+    
+<?php 
+endif; 
+endforeach; 
+?>
+
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -70,24 +73,30 @@
 </nav>
 
 <!-- Final do Menu -->
-
+<hr>
 <!-- Lista de produtos -->
-<div class="container>
-<div class="row row-cols-4">
-<div class="card" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
+<div class="container">
+<div class="row row-cols-4 g-3">
+
+<?php
+foreach($produtos as $key => $produto):
+?>
+ <div class="card">
+<div class="card">
+  <img src="<?php echo $produto ["foto"]; ?>" class="card-img-top" alt="...">
   <div class="card-body">
-    <h5 class="card-title">Card title</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+    <h5 class="card-title">"<?php echo $produto ["nome"]; ?>"</h5>
+    <a href="#" class="btn btn-primary">Ver produto</a>
   </div>
 </div>
+</div>
+<?php endforeach; ?>
 </div>
 </div>
 
 
 <!-- Final da lista -->
-
+<hr>
     <h1>Hello, world!</h1>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js" integrity="sha384-qKXV1j0HvMUeCBQ+QVp7JcfGl760yU08IQ+GpUo5hlbpg51QRiuqHAJz8+BrxE/N" crossorigin="anonymous"></script>
   </body>

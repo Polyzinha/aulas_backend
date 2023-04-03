@@ -36,7 +36,7 @@ $p3 = [
 
 $p5=[
       "nome"=>"A dança do universo: Dos Mitos de Criação ao Big-Bang",
-      "foto"=>"https://www.amazon.com.br/dan%C3%A7a-universo-Mitos-Cria%C3%A7%C3%A3o-Big-Bang-ebook/dp/B009WWEOMC?pf_rd_r=S9T3JBYYEFTQ8YWWVMK4&pf_rd_t=Events&pf_rd_i=deals&pf_rd_p=748bccb2-940c-427d-ac86-b2bfd1a04820&pf_rd_s=slot-16&ref=dlx_deals_gd_dcl_img_1_77eecb34_dt_sl16_20",
+      "foto"=>"https://m.media-amazon.com/images/I/51VwpPoaMrL.jpg",
       "preço"=>11.96,
       "descricao"=>"O que aconteceu no momento da Criação? Houve um minuto determinado em que o Universo que nos rodeia surgiu? Essas são questões tão antigas como a própria humanidade. Muitos procuram a resposta nos mitos e na religião. Outros nas teorias científicas. Em A dança do Universo, o físico Marcelo Gleiser mostra em linguagem clara que esses dois enfoques não são tão distantes quanto imaginamos, apresentando versões de diversas culturas para o mistério da Criação, até desembocar na explicação da ciência moderna para o surgimento do Universo.
       Prêmio Jabuti 1998 de Melhor Ensaio e Biografia",
