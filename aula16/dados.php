@@ -151,7 +151,7 @@ $p17 = [
     "foto" => "https://m.media-amazon.com/images/I/610JnI2AV9L._AC_SX569_.jpg",
     "preco" => 209.99,
     "descricao" => "Fantasia engraçada de dinossauro/unicórnio inflável, chama a atenção e risadas para você.",
-    "categoria" => "moda"
+    "categoria" => "Moda"
  ];
 
 $p19 = [
