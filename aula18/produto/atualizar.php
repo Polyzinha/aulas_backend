@@ -2,31 +2,33 @@
 
 require_once "../conexao.php";
 
-if (
-   isset($_POST["nome"]) && isset($_POST["descricao"])
-   && isset($_POST["preco"])
-) {
-   
-   $id = $_POST["id"];
-   $nome = $_POST["nome"];
-   $descricao = $_POST["descricao"];
-   $preco = $_POST["preco"];
-   $foto = $nome_arquivo;
+if(isset($_POST["nome"]) && isset($_POST["descricao"]) 
+           && isset($_POST["preco"]))
+{
 
-   //String com o comando SQL para ser executado no DB
-   $sql = "UPDATE produto SET 
-   `nome`=?, `descricao`=?, `preco`=?, `foto`=?
-    WHERE  `idproduto`=?;";
+//inclui o arquivo para salvar a foto do upload
+require_once "salvar_foto.php";
 
-   //Prepara o SQL para ser executado no banco de dados
-   $comando = $conexao->prepare($sql);
+$id =        $_POST["id"];        
+$nome =      $_POST["nome"];
+$descricao = $_POST["descricao"];
+$preco =     $_POST["preco"];
+$foto = $nome_arquivo;
 
-   //adiciona os valores nos parâmetros
-   $comando->bind_param("ssdsi", $nome, $descricao, $preco, $foto, $id);
+//String com o comando SQL para ser executado no DB
+$sql = "UPDATE produto SET 
+`nome`= ?, `descricao`= ?, `preco`= ?, `foto`= ? 
+WHERE  `idproduto`= ? ";
 
-   //executa o SQL - Comando no Banco de Dados
-   $comando->execute();
+//Prepara o SQL para ser executado no banco de dados
+$comando = $conexao->prepare($sql);
+
+//adiciona os valores nos parâmetros
+$comando->bind_param("ssdsi", $nome, $descricao, $preco, $foto, $id);
+
+//executa o SQL - Comando no Banco de Dados
+$comando->execute();
+
 }
-
 //abre o arquivo form.php
-header("Location: form.php");
+header("Location: produtos.php");
