@@ -21,5 +21,5 @@ $comando->bind_param("i", $id);
 $comando->execute();
 
 //abre o arquivo form.php
-header("Location: usuario.php");
+header("Location: index.php");
 }

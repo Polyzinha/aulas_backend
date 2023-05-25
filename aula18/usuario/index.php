@@ -28,6 +28,7 @@
             <td><?php echo $usuario['login']; ?></td>
             <td><img src="../uploads/<?php echo $usuario['foto']; ?>" height="30px" alt=""></td>
             <td>
+              <td class="text-end">
               <a href="excluir.php?id=<?php echo $usuario['idusuario']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
               <a href="form.php?id=<?php echo $usuario['idusuario']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
             </td>
