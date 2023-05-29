@@ -1,3 +1,4 @@
+<?php require_once "../controla_sessao/controla.php"; ?>
 <?php require_once "consultar_todos.php"; ?>
 <?php require_once "../template/cabecalho.php"; ?>
 
@@ -11,7 +12,7 @@
             </a>
         </div>
 
-        <table class="table">
+        <table class="table" id="myTable">
         <thead>
             <tr>
                 <th scope="col">Nome</th>
