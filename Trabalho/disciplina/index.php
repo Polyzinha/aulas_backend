@@ -31,8 +31,8 @@
                     <th scope="row"><?php echo $disciplina['bibliografia']; ?></th>
 
                     <td class="text-end">
-                        <a href="excluir.php?id=<?php echo $disciplina['iddisciplina']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a>
-                        <a href="form.php?id=<?php echo $disciplina['iddisciplina']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
+                        <a href="excluir.php?codigo=<?php echo $disciplina['codigo']; ?>" class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Excluir</a><br>
+                        <a href="form.php?codigo=<?php echo $disciplina['codigo']; ?>" class="btn btn-primary"><i class="fa-regular fa-pen-to-square"></i> Atualizar</a>
                     </td>
                 </tr>
             <?php } ?>
