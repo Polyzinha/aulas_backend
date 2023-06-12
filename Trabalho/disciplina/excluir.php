@@ -1,4 +1,3 @@
-<?php require_once "../controla_sessao/controla.php"; ?>
 <?php
 
 require_once "../conexao.php";
@@ -11,7 +10,7 @@ if(isset($_GET['id']))
 $id = $_GET['id'];
 
 //String com o comando SQL para ser executado no DB
-$sql = "DELETE FROM `produto` WHERE  `idproduto`= ? ; ";
+$sql = "DELETE FROM `disciplina` WHERE  `iddisciplina`= ? ; ";
 
 //Prepara o SQL para ser executado no banco de dados
 $comando = $conexao->prepare($sql);

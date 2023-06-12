@@ -10,7 +10,7 @@ if(isset($_GET['id']))
 $id = $_GET['id'];
 
 //String com o comando SQL para ser executado no DB
-$sql = "SELECT * FROM `produto` WHERE  `idproduto`= ? ; ";
+$sql = "SELECT * FROM `disciplina` WHERE  `iddisciplina`= ? ; ";
 
 //Prepara o SQL para ser executado no banco de dados
 $comando = $conexao->prepare($sql);
@@ -25,6 +25,6 @@ $comando->execute();
 $resultado = $comando->get_result();
 
 //pegar a primeira linha de resultado
-$produto = $resultado->fetch_assoc();
+$disciplina = $resultado->fetch_assoc();
 
 }
