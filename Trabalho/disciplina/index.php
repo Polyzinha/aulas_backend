@@ -9,7 +9,7 @@
         </a>
     </div>
 
-    <table class="table" id="myTable">
+    <table class="table" id="mytable">
         <thead>
             <tr>
                 <th scope="col">Código</th>
