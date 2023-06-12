@@ -6,12 +6,14 @@ $user = "root";
 $password = "";
 $database = "trabalho";
 
+//faz a conexão do PHP com o MySQL
 $conexao = new mysqli($host, 
                       $user, 
                       $password, 
                       $database, 
                       $port);
-                    
+
+//Verifica se houve um erro ao realizar a conexão                     
 if($conexao->connect_error){
     echo "Foi encontrado o erro : " . 
                        $conexao->connect_error;
