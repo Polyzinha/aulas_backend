@@ -8,11 +8,11 @@
    <form action="<?php echo isset($produto) ? 'atualizar.php' : 'inserir.php' ?>" method="post" enctype="multipart/form-data">
 
    <input type="hidden" name="codigo" id="codigo" 
-       value="<?php echo $usuario['iddisciplina'] ?? ""; ?>"><br>
+       value="<?php echo $usuario['codigo'] ?? ""; ?>"><br>
 
       <label for="nome" class="form-label">Nome</label><br>
       <input class="form-control" type="text" name="nome" id="nome" value="<?php echo $disciplina['nome'] ?? ""; ?>"><br>
-      <input type="hidden" name="id" id="id" value="<?php echo $disciplina['iddisciplina'] ?? ""; ?>"><br>
+      <input type="hidden" name="id" id="id" value="<?php echo $disciplina['codigo'] ?? ""; ?>"><br>
 
       <label for="ementa" class="form-label">Ementa</label><br>
       <textarea class="form-control" name="ementa" id="ementa"><?php echo $disciplina['ementa'] ?? ""; ?></textarea><br>

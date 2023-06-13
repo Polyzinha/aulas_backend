@@ -1,3 +1,3 @@
 <?php
-   header("Location: site/index.php");
+   header("Location: disciplina/index.php");
 ?>
