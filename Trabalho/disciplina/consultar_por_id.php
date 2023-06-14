@@ -2,10 +2,10 @@
 
 require_once "../conexao.php";
 
-if(isset($_GET['id']))
+if(isset($_GET['codigo']))
 {
 
-$id = $_GET['id'];
+$id = $_GET['codigo'];
 
 $sql = "SELECT * FROM `disciplina` WHERE  `codigo`= ? ; ";
 

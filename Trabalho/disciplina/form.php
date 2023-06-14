@@ -5,10 +5,9 @@
    <hr>
 
 
-   <form action="<?php echo isset($produto) ? 'atualizar.php' : 'inserir.php' ?>" method="post" enctype="multipart/form-data">
+   <form action="<?php echo isset($disciplina) ? 'atualizar.php' : 'inserir.php' ?>" method="post" enctype="multipart/form-data">
 
-   <input type="hidden" name="codigo" id="codigo" 
-       value="<?php echo $usuario['codigo'] ?? ""; ?>"><br>
+
 
       <label for="nome" class="form-label">Nome</label><br>
       <input class="form-control" type="text" name="nome" id="nome" value="<?php echo $disciplina['nome'] ?? ""; ?>"><br>
