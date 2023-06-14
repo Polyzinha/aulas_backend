@@ -1,3 +1,4 @@
+<?php require_once "../controla_sessao/controla.php"; ?>
 <?php
 
 require_once "../conexao.php";
@@ -31,4 +32,4 @@ $comando->execute();
 
 }
 //abre o arquivo form.php
-header("Location: produtos.php");
+header("Location: index.php");
